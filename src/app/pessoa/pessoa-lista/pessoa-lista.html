@@ -1,0 +1,43 @@
+<section class="pessoa-lista">
+  <h1>Pessoas cadastradas</h1>
+
+  @if (errosIdsDuplicados.length > 0) {
+    <div class="aviso-global">
+      @for (erro of errosIdsDuplicados; track erro) {
+        <p>⚠ {{ erro }}</p>
+      }
+    </div>
+  }
+
+  <div class="cartoes">
+    @for (resultado of resultados; track resultado.pessoa.id) {
+      <article class="cartao" [class.invalido]="resultado.erros.length > 0">
+        <header class="cartao-cabecalho">
+          <h2>{{ resultado.pessoa.nome }}</h2>
+          <span class="curso">{{ resultado.pessoa.curso }}</span>
+        </header>
+
+        <dl class="cartao-dados">
+          <dt>E-mail</dt>
+          <dd>{{ resultado.pessoa.email }}</dd>
+
+          @if (resultado.pessoa.telefone) {
+            <dt>Telefone</dt>
+            <dd>{{ resultado.pessoa.telefone }}</dd>
+          }
+
+          <dt>Vínculo</dt>
+          <dd>{{ resultado.pessoa.vinculo }} · {{ resultado.pessoa.ativo ? 'ativo' : 'inativo' }}</dd>
+        </dl>
+
+        @if (resultado.erros.length > 0) {
+          <ul class="cartao-erros">
+            @for (erro of resultado.erros; track erro) {
+              <li>{{ erro }}</li>
+            }
+          </ul>
+        }
+      </article>
+    }
+  </div>
+</section>

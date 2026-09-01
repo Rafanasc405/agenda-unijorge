@@ -1,0 +1,93 @@
+:host {
+  display: block;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1a1a1a;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 1.5rem;
+}
+
+.aviso-global {
+  border: 1px solid #e0a800;
+  background: #fff8e1;
+  color: #7a5b00;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.aviso-global p {
+  margin: 0.25rem 0;
+}
+
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.cartao {
+  border: 1px solid #d9dee4;
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.cartao.invalido {
+  border: 2px solid #d13a3a;
+  background: #fff5f5;
+}
+
+.cartao-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.cartao-cabecalho h2 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.curso {
+  font-size: 0.8rem;
+  color: #5a6472;
+  white-space: nowrap;
+}
+
+.cartao-dados {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+}
+
+.cartao-dados dt {
+  font-weight: 600;
+  color: #5a6472;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 0.4rem;
+}
+
+.cartao-dados dd {
+  margin: 0.1rem 0 0;
+}
+
+.cartao-erros {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+  color: #b02a2a;
+  font-size: 0.85rem;
+}
+
+.cartao-erros li {
+  margin-bottom: 0.2rem;
+}
